@@ -1,6 +1,7 @@
 import createHashHistory from 'history/lib/createHashHistory'
 import useQueries from 'history/lib/useQueries'
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import createTransitionManager from './createTransitionManager'
 import { routes } from './InternalPropTypes'
@@ -13,7 +14,7 @@ function isDeprecatedHistory(history) {
   return !history || !history.__v2_compatible__
 }
 
-const { func, object } = React.PropTypes
+const { func, object } = PropTypes
 
 /**
  * A <Router> is a high-level API for automatically setting up

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import warning from './routerWarning'
 
 function isValidChild(object) {
@@ -11,16 +12,11 @@ export function isReactChildren(object) {
 
 function checkPropTypes(componentName, propTypes, props) {
   componentName = componentName || 'UnknownComponent'
-
-  for (const propName in propTypes) {
-    if (Object.prototype.hasOwnProperty.call(propTypes, propName)) {
-      const error = propTypes[propName](props, propName, componentName)
-
-      /* istanbul ignore if: error logging */
-      if (error instanceof Error)
-        warning(false, error.message)
-    }
-  }
+  const error = PropTypes.checkPropTypes(propTypes, props, componentName)
+  /* istanbul ignore if: error logging */
+  if (error instanceof Error)
+    warning(false, error.message)
+  
 }
 
 function createRoute(defaultProps, props) {

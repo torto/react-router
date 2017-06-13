@@ -35,6 +35,7 @@
     "history": "^2.0.1",
     "hoist-non-react-statics": "^1.0.5",
     "invariant": "^2.2.1",
+    "prop-types": "^15.5.10",
     "warning": "^2.1.0"
   },
   "peerDependencies": {
@@ -77,10 +78,10 @@
     "mocha": "^2.4.5",
     "pretty-bytes": "^3.0.1",
     "qs": "^6.1.0",
-    "react": "^15.0.0",
-    "react-addons-css-transition-group": "^15.0.0",
-    "react-addons-test-utils": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^15.5.0",
+    "react-addons-css-transition-group": "^15.5.0",
+    "react-addons-test-utils": "^15.5.0",
+    "react-dom": "^15.5.0",
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.14",
